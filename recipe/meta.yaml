@@ -1,5 +1,5 @@
 {% set name = "django-cms" %}
-{% set version = "3.11.4" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-cms-{{ version }}.tar.gz
-  sha256: 58ff8bda97f0012fe365eaa542f1c91a310c6b774030ef5d6c2c3caaabf3cf31
+  sha256: 860a7e4045cde2ec22c0090d437f0110630ef8d9959b9a3b7cee2039c76687fb
 
 build:
   noarch: python
@@ -27,6 +27,7 @@ requirements:
     - django-sekizai >=0.7
     - djangocms-admin-style >=1.2
     - packaging
+    - setuptools
 
 test:
   imports:
