@@ -1,5 +1,5 @@
 {% set name = "django-cms" %}
-{% set version = "4.1.4" %}
+{% set version = "4.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: a8e700f84d5fc780e492aef777a3d6ad3372f5e87e04e121b60813cece0e6f31
+  sha256: 4efa64e1fd5293666d00cb58c982d598bb902aea1b0a943ef7bce6b82063e1e2
 
 build:
   noarch: python
