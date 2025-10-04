@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   name: django-cms
-  version: 5.0.4
+  version: "5.0.4"
 
 package:
   name: ${{ name|lower }}
@@ -23,7 +24,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<4.0
     - django >=2.2
     - django-classy-tags >=0.7.2
     - django-formtools >=2.1
@@ -39,6 +40,7 @@ tests:
         - cms
         - menus
       python_version: ${{ python_min }}.*
+      pip_check: true
   - requirements:
       run:
         - python ${{ python_min }}.*
