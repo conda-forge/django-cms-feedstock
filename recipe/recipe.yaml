@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: django-cms
-  version: "5.0.4"
+  version: "5.0.5"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: ea161ee070805af2074f308ebeb4a666832190506aa4641bc1070cbf6085488a
+  sha256: 56f33fed820acfc326bf08d9a4a75e6ad3a1c1e027a0352c5444fe124e1d6bfd
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
