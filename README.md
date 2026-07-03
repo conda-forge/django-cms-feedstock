@@ -5,18 +5,25 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/django-cms-feed
 
 Home: https://www.django-cms.org/
 
-Package license: Apache-2.0 AND BSD-3-Clause
+Package license: BSD-3-Clause
 
 Summary: Lean enterprise content management powered by Django.
+
+Development: https://github.com/django-cms/django-cms
+
+Documentation: https://docs.django-cms.org/
+
+Lean enterprise content management powered by Django.
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20937&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/django-cms-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/django-cms-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/django-cms-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
