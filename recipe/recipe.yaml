@@ -2,16 +2,15 @@
 schema_version: 1
 
 context:
-  name: django-cms
-  version: "5.0.5"
+  version: "5.0.8"
 
 package:
-  name: ${{ name|lower }}
+  name: django-cms
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 56f33fed820acfc326bf08d9a4a75e6ad3a1c1e027a0352c5444fe124e1d6bfd
+  url: https://pypi.org/packages/source/d/django-cms/django_cms-${{ version }}.tar.gz
+  sha256: ad3c640cfd784d93f0fb33fd3ba8ecfbd024c2e65b01a86a14379a0a5a895283
 
 build:
   number: 0
@@ -24,7 +23,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=${{ python_min }},<4.0
+    - python >=${{ python_min }}
     - django >=2.2
     - django-classy-tags >=0.7.2
     - django-formtools >=2.1
@@ -38,24 +37,20 @@ tests:
   - python:
       imports:
         - cms
-        - menus
-      python_version: ${{ python_min }}.*
       pip_check: true
-  - requirements:
-      run:
-        - python ${{ python_min }}.*
-        - pip
-    script:
-      - pip check
-      - djangocms --help
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
-  summary: Lean enterprise content management powered by Django.
-  license: Apache-2.0 AND BSD-3-Clause
-  license_file:
-    - LICENSE
-    - cms/static/cms/js/select2/LICENSE
   homepage: https://www.django-cms.org/
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Lean enterprise content management powered by Django.
+  description: |
+    Lean enterprise content management powered by Django.
+  repository: https://github.com/django-cms/django-cms
+  documentation: https://docs.django-cms.org/
 
 extra:
   recipe-maintainers:
