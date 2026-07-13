@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "5.0.8"
+  version: 5.1.0
 
 package:
   name: django-cms
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/django-cms/django_cms-${{ version }}.tar.gz
-  sha256: ad3c640cfd784d93f0fb33fd3ba8ecfbd024c2e65b01a86a14379a0a5a895283
+  sha256: fca369b7313fd5a2c838fc04df76d207b327cc615cc52e41ed62b6aaa40f012f
 
 build:
   number: 0
@@ -24,15 +24,13 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - django >=2.2
+    - django >=5.2
     - django-classy-tags >=0.7.2
     - django-formtools >=2.1
     - django-treebeard >=4.3
     - django-sekizai >=0.7
-    - djangocms-admin-style >=1.2
-    - packaging
-    - setuptools
-
+    - pyflakes
+    - dj-database-url
 tests:
   - python:
       imports:
@@ -40,7 +38,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   homepage: https://www.django-cms.org/
