@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 5.1.0
+  version: 5.1.1
 
 package:
   name: django-cms
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/django-cms/django_cms-${{ version }}.tar.gz
-  sha256: fca369b7313fd5a2c838fc04df76d207b327cc615cc52e41ed62b6aaa40f012f
+  sha256: 9b25f17d591e1f8beae8b2d47ce54e9b16f5af2d2a933b00d4ee62cdc9b2a55e
 
 build:
   number: 0
@@ -27,10 +27,9 @@ requirements:
     - django >=5.2
     - django-classy-tags >=0.7.2
     - django-formtools >=2.1
-    - django-treebeard >=4.3
+    - django-treebeard >=4.3,<6
     - django-sekizai >=0.7
-    - pyflakes
-    - dj-database-url
+    - packaging
 tests:
   - python:
       imports:
